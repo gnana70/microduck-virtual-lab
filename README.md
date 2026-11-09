@@ -35,12 +35,17 @@ pip install mujoco==4.0.0 onnxruntime numpy colorama
 mkdir -p third_party policies
 git clone https://github.com/pollen-robotics/microduck_rl third_party/microduck_rl        # tested at bae39f5
 git clone https://github.com/Rhoban/bam third_party/bam && git -C third_party/bam checkout 62bd8ce12154340be97e06f7f41a0ca8f116d967
-# Pollen's walking policy: download velstand.onnx from https://huggingface.co/pollen-robotics/microduck-policies into policies/
-#   (we used sha256 2fc7f8ee6acd7d0d3f66a99927b5d5a56589aeed02ec714de329b252d5ccf492)
+# Pollen's walking policy, pinned to the revision we tested (v8, 12 Oct 2026):
+curl -L -o policies/velstand.onnx https://huggingface.co/pollen-robotics/microduck-policies/resolve/665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448/velstand.onnx
+#   sha256 2fc7f8ee6acd7d0d3f66a99927b5d5a56589aeed02ec714de329b252d5ccf492
 python physics_tests.py && python push_sweep.py && python battery_steered.py
 ```
 
 Set `MUJOCO_GL=egl` on a headless Linux machine.
+
+### Which velstand version
+
+All results above use **velstand v8** (Hugging Face commit `665ae4eb`, 12 Oct 2026). On 6 Nov 2026 Pollen moved the repo's `main` back to v7 (commit `6677ec00`), so download the pinned file above to reproduce these numbers. We re-ran the walk test with v7 (`results/velstand_v7_check.json`): v7 stands still at the 0.25 m/s command used here; at 0.4 m/s the same finding holds: the XL330 model walks 1.64 m nearly straight (3°), while the HD-1910 model turns 156° in 10 s.
 
 ## Credits and licences
 

@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-10",
+ "mujoco": "4.0.0",
+ "test": "walk_test, 10 s, physics_tests.py",
+ "v8_665ae4eb_used_in_results": {
+  "vx_0.25": {
+   "xl330": {
+    "forward_m": 0.605,
+    "lateral_m": -0.087,
+    "heading_change_deg": -21.1,
+    "fell": false
+   },
+   "hd1910": {
+    "forward_m": 0.27,
+    "lateral_m": 0.357,
+    "heading_change_deg": 112.1,
+    "fell": false
+   }
+  }
+ },
+ "v7_6677ec00_current_main": {
+  "vx_0.1": {
+   "xl330": {
+    "forward_m": 0.003,
+    "heading_change_deg": 0.3
+   },
+   "hd1910": {
+    "forward_m": 0.002,
+    "heading_change_deg": 0.2
+   }
+  },
+  "vx_0.25": {
+   "xl330": {
+    "forward_m": 0.011,
+    "lateral_m": 0.001,
+    "heading_change_deg": -1.3
+   },
+   "hd1910": {
+    "forward_m": 0.011,
+    "lateral_m": 0.0,
+    "heading_change_deg": -0.7
+   }
+  },
+  "vx_0.4": {
+   "xl330": {
+    "forward_m": 1.644,
+    "lateral_m": -0.021,
+    "heading_change_deg": 3.0,
+    "fell": false
+   },
+   "hd1910": {
+    "forward_m": 0.249,
+    "lateral_m": 1.057,
+    "heading_change_deg": 155.9,
+    "fell": false
+   }
+  },
+  "vx_0.6": {
+   "xl330": {
+    "forward_m": 2.598,
+    "lateral_m": 0.047,
+    "heading_change_deg": 29.9,
+    "fell": false
+   },
+   "hd1910": {
+    "forward_m": 0.761,
+    "lateral_m": 1.735,
+    "heading_change_deg": 180.3,
+    "fell": false
+   }
+  }
+ }
+}
